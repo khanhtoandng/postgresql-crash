@@ -1,0 +1,3 @@
+SELECT * from users
+order by id desc
+limit 3

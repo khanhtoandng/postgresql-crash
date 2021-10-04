@@ -1,0 +1,5 @@
+select users.id, username, count(*)
+from likes
+join users on users.id = likes.user_id
+group by users.id
+order by username
