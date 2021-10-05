@@ -82,31 +82,33 @@
 
 12. EXCEPT
 
-- FInd the rows that are present in first query but not second query
+    - FInd the rows that are present in first query but not second query
 
 13. Subquery
 
-- SELECT: any subquery that results in a single value
-- FROM: must have an alias applied to it
+    - SELECT: any subquery that results in a single value
+    - FROM: must have an alias applied to it
 
-* JOIN: any subquery that returns data compatible with on clause
-* WHERE: depending on the comparision operator(single value | single column)
+    * JOIN: any subquery that returns data compatible with on clause
+    * WHERE: depending on the comparision operator(single value | single column)
 
 14. Distinct
 
 15. Polymorphic association
 
-- Couldnt be created as a foreign key column
-- solutions:
-  - Create a single table: COALESCE(arg1, arg2): return arg1 if arg1 !== null, otherwise return arg2
-  - Multiple tables
+    - Couldnt be created as a foreign key column
+    - solutions:
+    - Create a single table: COALESCE(arg1, arg2): return arg1 if arg1 !== null, otherwise return arg2
+    - Multiple tables
 
 ## DESIGN DB
 
 - ANYTHING: it doesnt matter if a value exist
+
 - NOT NULL: a value must be provided
 - NOT NULL + DEFAULT: we want a value, but it should be optional
 
 * Validation:
-  - NO-Validation: value changes frequently, complex\
-  - Validation: Make sure to have right type or domain of value
+
+- NO-Validation: value changes frequently, complex\
+- Validation: Make sure to have right type or domain of value

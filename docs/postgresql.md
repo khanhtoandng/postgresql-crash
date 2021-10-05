@@ -1,7 +1,8 @@
 # Postgresql
 
 > 189. HEAP FILE LAYOUT
-> 198. BEHIND THE SCENES OF INDEXS
+> 190. BEHIND THE SCENES OF INDEXS
+
 ## Data Types
 
 1. Number
@@ -33,7 +34,7 @@
 
 ## Performance
 
-# Data Structure in Postgresql
+### Data Structure in Postgresql
 
     * Store data:
         * Heap: contains all the data of tables
@@ -48,3 +49,19 @@
         * Postgest:
             * automatically creates an index for the primary key column of every table
             * automatically creates an index for any unique constraint
+
+### Query Tuning: benchmarking + evaluating queries
+
+    * Explain: Build a query plan and display info about it
+    * Explain analyze: Build a query plan, run it, and info about it
+
+### View
+
+    * Create a fake table has rows from other tbales
+    * Can reference the view in any place
+    * query that gets executed every time you refer to it
+
+### Materialized View
+
+    * Query that gets executed only at very specific time
+    * Result are saved and can be referenced without rerunning the query
