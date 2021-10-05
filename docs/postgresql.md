@@ -1,5 +1,7 @@
 # Postgresql
 
+> 189. HEAP FILE LAYOUT
+> 198. BEHIND THE SCENES OF INDEXS
 ## Data Types
 
 1. Number
@@ -28,3 +30,21 @@
      - without tz: convert 24 time
      - with tz: UTC
    * Timestamp with time zone
+
+## Performance
+
+# Data Structure in Postgresql
+
+    * Store data:
+        * Heap: contains all the data of tables
+        * Tuple/item: individual row from the table
+        * Block/page: Heap file is divided into many different blocks. Each block stores some number of rows
+    * Index:
+        * Data structure that efficiently tells us what block/index a record is stored at
+        * Pros: fast execution
+        * Cons:
+            * Can be large
+            * slows down insert/update/delete
+        * Postgest:
+            * automatically creates an index for the primary key column of every table
+            * automatically creates an index for any unique constraint
