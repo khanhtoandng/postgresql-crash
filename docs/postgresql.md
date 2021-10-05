@@ -73,3 +73,7 @@
         * BEGIN: db create a isolated workspace for 1 connection -> make a copy all of tables to this space
         * COMMIT: to merge changes back into main data pool
         * ROLLBACK: running bad command will put the trans in an aborted state - you must rollback
+
+## SQL Injection
+
+    * NEVER concatenate user-provided input into a sql query
