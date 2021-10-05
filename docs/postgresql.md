@@ -65,3 +65,11 @@
 
     * Query that gets executed only at very specific time
     * Result are saved and can be referenced without rerunning the query
+
+### Transaction
+
+    * Losing the connection will automatically rollback the transaction
+    * Flow:
+        * BEGIN: db create a isolated workspace for 1 connection -> make a copy all of tables to this space
+        * COMMIT: to merge changes back into main data pool
+        * ROLLBACK: running bad command will put the trans in an aborted state - you must rollback
