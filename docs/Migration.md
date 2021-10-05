@@ -30,3 +30,10 @@
   4. Start receiving traffic
 
 > $env:DATABASE_URL="postgres://postgres:admin@localhost:5432/socialnetwork"; npm run migrate up
+
+## Schema vs Data Migration
+
+    * Schema Migration: add/remove column, add/remove table, ...
+    * Data Migration: move data around between different column
+
+    > Dont run data migrations at the same time as schema migration: Split seperate Migration
