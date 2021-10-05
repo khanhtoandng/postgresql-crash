@@ -9,7 +9,7 @@ class Pool {
     }
 
     close() {
-        return this._pool.end(sql);
+        return this._pool.end();
     }
 
     query(sql, params) {

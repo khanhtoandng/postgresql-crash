@@ -15,7 +15,7 @@ class UserRepo {
     
     }
 
-    static async insert(user) {
+    static async insert(username, bio) {
         const { rows} = await pool.query(
             'INSERT INTO users (username, bio) VALUES ($1, $2) RETURNING *;',
             [username, bio]
@@ -39,6 +39,12 @@ class UserRepo {
         `,[id])
 
         return toCamelCase(rows)[0]
+    }
+
+    static async count() {
+        const {rows} = await pool.query('SELECT COUNT(*) FROM users;')
+
+        return parseInt(rows[0].count);
     }
 }
 
