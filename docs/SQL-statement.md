@@ -110,5 +110,5 @@
 
 * Validation:
 
-- NO-Validation: value changes frequently, complex\
-- Validation: Make sure to have right type or domain of value
+  - NO-Validation: value changes frequently, complex\
+  - Validation: Make sure to have right type or domain of value

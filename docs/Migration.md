@@ -33,7 +33,7 @@
 
 ## Schema vs Data Migration
 
-    * Schema Migration: add/remove column, add/remove table, ...
-    * Data Migration: move data around between different column
+> Dont run data migrations at the same time as schema migration: Split seperate Migration
 
-    > Dont run data migrations at the same time as schema migration: Split seperate Migration
+- Schema Migration: add/remove column, add/remove table, ...
+- Data Migration: move data around between different column
