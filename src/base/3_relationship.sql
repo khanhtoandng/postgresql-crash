@@ -1,11 +1,10 @@
--- Generate ID
+-- PRIMARY KEY
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     username VARCHAR(255)
 )
 
--- Foreign key
-
+-- FOREIGN KEY
 CREATE TABLE photo (
     id SERIAL PRIMARY KEY,
     url VARCHAR(255),
@@ -13,7 +12,6 @@ CREATE TABLE photo (
 )
 
 -- ON DELETE CASCADE
--- Delete the photo too
 CREATE TABLE photo (
     id SERIAL PRIMARY KEY,
     url VARCHAR(255),

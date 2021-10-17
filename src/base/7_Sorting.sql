@@ -1,4 +1,4 @@
--- Two variants on sorting
+-- ORDER BY
 SELECT *
 FROM products
 ORDER BY price, weght DESC;

@@ -1,3 +1,3 @@
--- Ex24
+-- DISTINCT
 select count(distinct manufacturer)
 from phones

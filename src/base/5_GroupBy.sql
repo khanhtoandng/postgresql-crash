@@ -1,9 +1,9 @@
--- GroupBy
+-- GROUP BY
 SELECT user_id, MAX(id)
 FROM comments
 GROUP BY user_id
 
--- Having
+-- HAVING
 SELECT photo_id, COUNT(*) 
 FROM comments
 WHERE photo_id < 3

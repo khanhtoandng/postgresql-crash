@@ -7,23 +7,26 @@ population INTEGER,
 area INTEGER
 );
 
+-- Drop table
+DROP TABLE cities;
 
--- Insert data
+-- Rename table
+ALTER TABLE vendors RENAME TO suppliers;
 
-INSERT INTO cities(name, country, population, area)
-VALUES
-('Danang', 'Vietnam', 1300000, 1285),
-('HCM', 'Vietnam', 1300000, 12385)
+-- Add column
+ALTER TABLE customers 
+ADD COLUMN phone VARCHAR;
+
+-- Drop column
+ALTER TABLE books 
+DROP COLUMN description;
+
+-- Change Column Type
+ALTER TABLE assets 
+ALTER COLUMN name TYPE VARCHAR;
+
+-- Rename Column
+ALTER TABLE customers 
+RENAME COLUMN email TO contact_email;
 
 
--- Select all
-SELECT * FROM cities
-
--- Select specific column
-SELECT name, population FROM cities
-
--- Select: Caculated column
-SELECT name, population*area as destiny FROM cities
-
--- Select: string operator & function
-SELECT CONCAT(UPPER(name), ', ', LOWER(country)) as union FROM cities

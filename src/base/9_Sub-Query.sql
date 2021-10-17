@@ -4,7 +4,7 @@ select name, price, price/(
 ) as price_ratio
 from phones
 
--- subquery in from
+-- Subquery in FROM
 select sum(count)/count(user_id)
 FROM (select user_id, count(*)
 from orders
@@ -21,12 +21,12 @@ select name, price
 from phones
 where price > (select price from phones where name = 'S5620 Monte')
 
--- Ex22
+-- ALL
 select name
 from phones
 where price > ALL (select price from phones where manufacturer = 'Samsung')
 
--- Ex23
+-- in SELECT
 Select (
     Select max(price) from phones
 ) as max_price,
